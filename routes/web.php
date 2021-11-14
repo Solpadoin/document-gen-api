@@ -30,4 +30,6 @@ Route::get('/profile/me',   [UserController::class, 'me'])->name('user-profile')
 Route::get('/profile/qr',   [UserController::class, 'renderQrCode'])->name('user-qr-code');
 
 Route::post('/profile/to-pdf', [UserController::class, 'convertWordToPdf'])->name('user-generate-pdf');
+Route::post('/profile/file-upload', [UserController::class, 'uploadToStorage'])->name('user-upload-storage');
+
 
